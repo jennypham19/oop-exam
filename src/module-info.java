@@ -1,0 +1,2 @@
+module JavaExam {
+}
