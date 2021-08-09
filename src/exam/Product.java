@@ -41,12 +41,12 @@ public class Product {
 	public float chietKhau() {
 		return chietKhau/100;
 	}
-	public String print() {
+	public String printDetails() {
 		return "{" +
 				"mã = "+maHang +
 				",tên sản phẩm = '"+tenSanPham+"'"+
 				",giá = "+gia +
-				",chiết khấu = "+chietKhau +
+				",chiết khấu = "+chietKhau() +"%"+
 				"}";
 					
 	}

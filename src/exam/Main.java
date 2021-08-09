@@ -29,7 +29,7 @@ public class Main {
 	public void inSanPham() {
 		System.out.println("Danh sách sản phẩm là:");
 		for(int i=0;i<danhsach.size();i++) {
-			System.out.println(danhsach.get(i).print());
+			System.out.println(danhsach.get(i).printDetails());
 		}
 	}
 	//lấy giá cuối cùng
@@ -49,7 +49,7 @@ public class Main {
 
 			@Override
 			public int compare(Product price1, Product price2) {
-				if(price1.getRealPrice()>price2.getRealPrice()) {
+				if(price1.getRealPrice()<price2.getRealPrice()) {
 					return 1;
 				}else {
 					if(price1.getRealPrice()==price2.getRealPrice()) {
@@ -60,7 +60,7 @@ public class Main {
 			}
 			
 		});
-		System.out.println("Thông tin sản phẩm tăng dần là: ");
+		System.out.println("Thông tin sản phẩm giảm dần là: ");
 		for(int i=0;i<danhsach.size();i++) {
 			System.out.println("Tên sản phẩm "+ danhsach.get(i).getTenSanPham() + " giá "+ danhsach.get(i).getRealPrice());
 		}
